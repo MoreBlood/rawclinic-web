@@ -12,9 +12,9 @@
   --bg-secondary: #ffffff;
   --bg-tertiary: #f8f9fa;
   --text-primary: #000000;
-  --text-secondary: #3c3c43;
+  --text-secondary: #1d1d1f;
   --text-tertiary: #8e8e93;
-  --accent-blue: #007aff;
+  --accent-blue: #0051d5;
   --accent-purple: #5856d6;
   --border-color: #e5e5ea;
   --shadow-color: rgba(0, 0, 0, 0.1);
@@ -141,7 +141,7 @@
     --text-primary: #ffffff;
     --text-secondary: #e5e5ea;
     --text-tertiary: #8e8e93;
-    --accent-blue: #0a84ff;
+    --accent-blue: #409cff;
     --accent-purple: #5e5ce6;
     --border-color: #38383a;
     --shadow-color: rgba(0, 0, 0, 0.4);
@@ -243,11 +243,17 @@ strong {
   border-radius: var(--border-radius-2xl);
   margin-top: var(--margin-contact-top);
   border: var(--border-width-thin) solid var(--border-color);
+  color: var(--text-primary);
 }
 
 .contact h2 {
   margin-top: 0;
   font-size: var(--font-size-xl);
+  color: var(--text-primary);
+}
+
+.contact p {
+  color: var(--text-primary);
 }
 
 a {
