@@ -5,6 +5,14 @@ import Container from '@/components/Container'
 import Important from '@/components/Important'
 import LastUpdated from '@/components/LastUpdated'
 import { config } from '@/config'
+import { generateMetadata } from '@/lib/metadata'
+
+export const metadata = generateMetadata({
+	title: 'Terms of Service',
+	description: `Terms of Service for ${config.appName}. Learn about the license, user responsibilities, intellectual property, and limitations of liability.`,
+	path: '/terms',
+	keywords: ['terms of service', 'license', 'user agreement']
+})
 
 export default function Terms() {
 	return (
@@ -118,14 +126,7 @@ export default function Terms() {
 				regarding use of the App.
 			</p>
 
-			<Contact>
-				<h2>Contact Us</h2>
-				<p>If you have any questions about these Terms of Service, please contact us at:</p>
-				<p>
-					<strong>Email: </strong>
-					<a href={`mailto:${config.contactEmail}`}>{config.contactEmail}</a>
-				</p>
-			</Contact>
+			<Contact description="If you have any questions about these Terms of Service, please contact us at:" />
 		</Container>
 	)
 }

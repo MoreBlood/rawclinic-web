@@ -1,6 +1,14 @@
 import Container from '@/components/Container'
 import { config } from '@/config'
+import { generateMetadata } from '@/lib/metadata'
 import styles from '../../components/Container/Container.module.scss'
+
+export const metadata = generateMetadata({
+	title: 'Feedback',
+	description: `Share your feedback about ${config.appName}. Help us improve the app with your suggestions and comments.`,
+	path: '/feedback',
+	noindex: true
+})
 
 export default function Feedback() {
 	return (

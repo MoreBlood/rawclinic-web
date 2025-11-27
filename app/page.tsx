@@ -3,6 +3,15 @@ import Container from '@/components/Container'
 import Content from '@/components/Content'
 import Subtitle from '@/components/Subtitle'
 import { config } from '@/config'
+import { generateMetadata as genMeta } from '@/lib/metadata'
+
+export const metadata = genMeta({
+	title: 'Home',
+	description:
+		'Professional RAW photo editing for iOS. Edit RAW photos directly on your device with 100% local processing and no data collection. Support for various RAW formats.',
+	path: '/',
+	keywords: ['RAW formats', 'local processing', 'privacy']
+})
 
 export default function Home() {
 	return (
@@ -25,14 +34,7 @@ export default function Home() {
 					<li>Save edited photos to your library</li>
 				</ul>
 
-				<Contact>
-					<h2>Contact Us</h2>
-					<p>If you have any questions, please contact us at:</p>
-					<p>
-						<strong>Email: </strong>
-						<a href={`mailto:${config.contactEmail}`}>{config.contactEmail}</a>
-					</p>
-				</Contact>
+				<Contact />
 			</Content>
 		</Container>
 	)

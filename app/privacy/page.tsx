@@ -3,6 +3,14 @@ import Contact from '@/components/Contact'
 import Container from '@/components/Container'
 import LastUpdated from '@/components/LastUpdated'
 import { config } from '@/config'
+import { generateMetadata } from '@/lib/metadata'
+
+export const metadata = generateMetadata({
+	title: 'Privacy Policy',
+	description: `Privacy Policy for ${config.appName}. We do not collect, store, or transmit any personal data. All processing happens locally on your device.`,
+	path: '/privacy',
+	keywords: ['privacy policy', 'data protection', 'no data collection']
+})
 
 export default function Privacy() {
 	return (
@@ -73,14 +81,7 @@ export default function Privacy() {
 				complete control over your photos through iOS system settings.
 			</p>
 
-			<Contact>
-				<h2>Contact Us</h2>
-				<p>If you have any questions about this privacy policy, please contact us at:</p>
-				<p>
-					<strong>Email: </strong>
-					<a href={`mailto:${config.contactEmail}`}>{config.contactEmail}</a>
-				</p>
-			</Contact>
+			<Contact description="If you have any questions about this privacy policy, please contact us at:" />
 		</Container>
 	)
 }
