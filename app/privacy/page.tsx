@@ -73,11 +73,10 @@ export default function Privacy() {
 				<h2>Contact Us</h2>
 				<p>If you have any questions about this privacy policy, please contact us at:</p>
 				<p>
-					<strong>Email:</strong>
+					<strong>Email: </strong>
 					<a href={`mailto:${config.contactEmail}`}>{config.contactEmail}</a>
 				</p>
 			</div>
 		</div>
 	)
 }
-

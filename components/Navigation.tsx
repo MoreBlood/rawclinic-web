@@ -1,8 +1,8 @@
 'use client'
 
-import { useState } from 'react'
-import { usePathname } from 'next/navigation'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { useState } from 'react'
 
 export default function Navigation() {
 	const pathname = usePathname()
@@ -15,6 +15,8 @@ export default function Navigation() {
 	const closeMenu = () => {
 		setIsMenuOpen(false)
 	}
+
+	console.log(pathname)
 
 	return (
 		<div className="navigation">
@@ -35,25 +37,16 @@ export default function Navigation() {
 				<Link href="/" className={`nav-link ${pathname === '/' ? 'active' : ''}`} onClick={closeMenu}>
 					Home
 				</Link>
-				<Link
-					href="/privacy"
-					className={`nav-link ${pathname === '/privacy' ? 'active' : ''}`}
-					onClick={closeMenu}
-				>
+				<Link href="/privacy" className={`nav-link ${pathname === '/privacy/' ? 'active' : ''}`} onClick={closeMenu}>
 					Privacy Policy
 				</Link>
-				<Link href="/terms" className={`nav-link ${pathname === '/terms' ? 'active' : ''}`} onClick={closeMenu}>
+				<Link href="/terms" className={`nav-link ${pathname === '/terms/' ? 'active' : ''}`} onClick={closeMenu}>
 					Terms of Service
 				</Link>
-				<Link
-					href="/feedback"
-					className={`nav-link ${pathname === '/feedback' ? 'active' : ''}`}
-					onClick={closeMenu}
-				>
+				<Link href="/feedback" className={`nav-link ${pathname === '/feedback/' ? 'active' : ''}`} onClick={closeMenu}>
 					Feedback
 				</Link>
 			</nav>
 		</div>
 	)
 }
-
